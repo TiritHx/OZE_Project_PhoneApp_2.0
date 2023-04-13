@@ -14,7 +14,7 @@ namespace OZE_2._0
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new AppShell(); // to musi być żeby działało ehhhhh
         }
 
         protected override void OnStart()

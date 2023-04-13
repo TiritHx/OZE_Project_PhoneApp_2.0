@@ -13,7 +13,7 @@ namespace OZE_2._0
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            Navigation.PushAsync(new LoginPage());
+            Navigation.PushAsync(new LoginPage()); // bez tego odpala sie AboutPage jako uno
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

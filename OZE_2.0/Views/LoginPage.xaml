@@ -8,8 +8,25 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource Primary}">
-            <Label Text="Navabrar viible very importante function gotta rember" />
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#8C5DA1"/>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Navabrar viible very importante function gotta rember" />
+
+                <Label Text="Login" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" />
+
+                <Label Text="Email" TextColor="White" Margin="30,10,30,-10" FontSize="25" />
+                <Frame CornerRadius="10" Margin="30,10,30,-10" Padding="0,0,0,0" BackgroundColor="White" HasShadow="True">
+                   <Entry x:Name="EmailEntry" TextColor="Black" BackgroundColor="White" />
+                </Frame>
+
+                <Label Text="Password" TextColor="White" Margin="30,10,30,-10" FontSize="25" />
+                <Frame CornerRadius="10" Margin="30,10,30,10" Padding="0,0,0,0" BackgroundColor="White" HasShadow="True" >
+                    <Entry x:Name="PasswordEntry" TextColor="Black" BackgroundColor="White" IsPassword="True" />
+                </Frame>
+            
+                <Frame CornerRadius="10" Margin="80,10,80,10" Padding="0,0,0,0" BackgroundColor="#8C5DA1">
+                    <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#8C5DA1" Margin="0" FontSize="20"/>
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
