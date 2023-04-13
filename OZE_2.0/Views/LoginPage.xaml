@@ -7,7 +7,8 @@
              x:Class="OZE_2._0.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center" BackgroundColor="{StaticResource Primary}">
+        <StackLayout BackgroundColor="{StaticResource Primary}">
+            <Label Text="Navabrar viible very importante function gotta rember" />
             <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#8C5DA1"/>
         </StackLayout>
     </ContentPage.Content>
