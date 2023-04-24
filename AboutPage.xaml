@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OZE_2._0.Views.AboutPage"
+             xmlns:vm="clr-namespace:OZE_2._0.ViewModels"
+             Title="{Binding Title}"
+              >
+             
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#c9b0ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <StackLayout BackgroundColor="{StaticResource Accent}" HorizontalOptions="Fill" Padding="15">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="HydroSpark" FontSize="50" HorizontalOptions="FillAndExpand" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+            <Frame BackgroundColor="#4DA7EA">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Stats" TextColor="White"/>
+                    <Image Grid.Row="0" Grid.Column="2" Source="wykres"/>
+                    <Image Grid.Row="1" Source="Vector"/>
+                    <Label Grid.Row="1" Grid.Column="1" FontSize="20" Text="Voltage:" TextColor="White"/>
+                    <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="16kWh" TextColor="White" HorizontalOptions="End"/>
+                    <Image Grid.Row="2" Source="bateria"/>
+                    <Label Grid.Row="2" Grid.Column="1" FontSize="20" Text="Power:" TextColor="White"/>
+                    <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="10000" TextColor="White" HorizontalOptions="End"/>
+                    
+                    
+                </Grid>
+            </Frame>
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand" BackgroundColor="Black" >
+            <Label Text="௹ HydroSpark Team" TextColor="White" />
+            <Label Text="tu będą imaże" TextColor="white" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
