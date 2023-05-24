@@ -1,12 +1,12 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Linq;
 using System.Xml.Linq;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 
 namespace OZE_2._0.Views
@@ -18,10 +18,9 @@ namespace OZE_2._0.Views
             base.OnAppearing();
 
             // to pobiera odpowiedz z bazy
-            string devicesResponse = await Connekszyn.GetDevices();
+            string devicesResponse = await Connekszyn.GetDevices();   
 
-            // deserializacja uzywajaca Newtonsoft.Json
-            List<Device> devices = JsonConvert.DeserializeObject<List<Device>>(devicesResponse);
+            Device devices = JsonSerializer.Deserialize<Device>(devicesResponse);
 
             foreach (Device device in devices)
             {
@@ -29,7 +28,7 @@ namespace OZE_2._0.Views
                 string name = device.name;
                 string userID = device.userID;
                 DateTime dateOfProduction = device.dateOfProduction;
-                decimal power = device.Power.powerdecimal; 
+                decimal power = device.Power.powerdecimal;
                 decimal powerDaily = device.PowerDaily.powerdailydecimal;
                 decimal powerMonthly = device.PowerMonthly.powermonthlydecimal;
                 int version = device.__v;
@@ -43,7 +42,6 @@ namespace OZE_2._0.Views
         public AboutPage()
         {
             InitializeComponent();
-
         }
     }
 }

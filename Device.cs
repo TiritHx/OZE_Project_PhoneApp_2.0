@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +6,7 @@ namespace OZE_2._0
 {
     class Device
     {
-        
+
         public string _id { get; set; }
         public string name { get; set; }
         public string userID { get; set; }
@@ -21,19 +20,16 @@ namespace OZE_2._0
 
     //niżej jakieś takie wygibasy bo jest objekt w objekcie
     class Power
-    {
-        [JsonProperty("$numberDecimal")]
+    {     
         public decimal powerdecimal { get; set; }
     }
     class PowerDaily
     {
-        [JsonProperty("$numberDecimal")]
         public decimal powerdailydecimal { get; set; }
     }
     class PowerMonthly
     {
-        [JsonProperty("$numberDecimal")]
-        public decimal powermonthlydecimal { get; set;}
+        public decimal powermonthlydecimal { get; set; }
     }
 
 }
