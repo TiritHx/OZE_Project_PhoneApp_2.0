@@ -37,11 +37,11 @@
                             <ColumnDefinition Width="25" />
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Stats" TextColor="White"/>
-                        <Image Grid.Row="0" Grid.Column="2" Source="wykres"/>
-                        <Image Grid.Row="1" Source="Vector"/>
+                        <WebView x:Name="chart" Grid.Row="0" Grid.Column="2"/>
+                        <WebView x:Name="power" Grid.Row="1"/>
                         <Label Grid.Row="1" Grid.Column="1" FontSize="20" Text="Voltage:" TextColor="White"/>
                         <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="16kWh" TextColor="White" HorizontalOptions="End"/>
-                        <Image Grid.Row="2" Source="bateria"/>
+                        <WebView x:Name="battery" Grid.Row="2"/>
                         <Label Grid.Row="2" Grid.Column="1" FontSize="20" Text="Power:" TextColor="White"/>
                         <Label x:Name="devicePowerLabel" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="" TextColor="White" HorizontalOptions="End"/>
                     </Grid>
@@ -59,11 +59,11 @@
                             <ColumnDefinition Width="25" />
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Savings" TextColor="White"/>
-                        <Image Grid.Row="0" Grid.Column="2" Source="dolar"/>
-                        <Image Grid.Row="1" Source="calendar"/>
+                        <WebView x:Name="dollar" Grid.Row="0" Grid.Column="2"/>
+                        <WebView x:Name="calendar" Grid.Row="1"/>
                         <Label Grid.Row="1" Grid.Column="1" FontSize="20" Text="Month:" TextColor="White"/>
                         <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="$1000" TextColor="White" HorizontalOptions="End"/>
-                        <Image Grid.Row="2" Source="calendar"/>
+                        <WebView x:Name="calendar1" Grid.Row="2"/>
                         <Label Grid.Row="2" Grid.Column="1" FontSize="20" Text="Year:" TextColor="White"/>
                         <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="$1000000" TextColor="White" HorizontalOptions="End"/>
                     </Grid>
@@ -82,14 +82,14 @@
                             <ColumnDefinition Width="25" />
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Device Info" TextColor="White"/>
-                        <ImageButton Grid.Row="0" Grid.Column="2" Source="settings" BackgroundColor="Transparent" />
-                        <Image Grid.Row="1" Source="key"/>
+                        <WebView x:Name="settings" Grid.Row="0" Grid.Column="2"/>
+                        <WebView x:Name="key" Grid.Row="1"/>
                         <Label Grid.Row="1" Grid.Column="1" FontSize="19" Text="ID:" TextColor="White"/>
                         <Label x:Name="deviceIdLabel" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="15" Text="" TextColor="White" HorizontalOptions="End"/>
-                        <Image Grid.Row="2" Source="list"/>
+                        <WebView x:Name="list" Grid.Row="2"/>
                         <Label Grid.Row="2" Grid.Column="1" FontSize="19" Text="Model:" TextColor="White"/>
                         <Label x:Name="deviceNameLabel" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="19" Text="" TextColor="White" HorizontalOptions="End"/>
-                        <Image Grid.Row="3" Source="calendar"/>
+                        <WebView x:Name="calendar2" Grid.Row="3"/>
                         <Label Grid.Row="3" Grid.Column="1" FontSize="19" Text="Manufactured:" TextColor="White"/>
                         <Label x:Name="deviceDataLabel" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" FontSize="11" Text="" TextColor="White" HorizontalOptions="End"/>
                     </Grid>
