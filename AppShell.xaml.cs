@@ -13,6 +13,7 @@ namespace OZE_2._0
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(TurbinesPage), typeof(TurbinesPage));
             Navigation.PushAsync(new LoginPage()); // bez tego odpala sie AboutPage jako uno
         }
 
