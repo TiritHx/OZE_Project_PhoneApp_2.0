@@ -11,7 +11,7 @@
         <StackLayout BackgroundColor="{StaticResource Primary}">
             <StackLayout VerticalOptions="CenterAndExpand">
                 
-                <Label IsVisible="False" Text="Navabrar viible very importante function gotta rember" />
+                <Label x:Name="tests" IsVisible="true" Text="Navabrar viible very importante function gotta rember" />
 
                 <Label x:Name="justText" Text="Login" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" />
 
@@ -49,6 +49,8 @@
                 <Frame CornerRadius="10" Margin="80,10,80,10" Padding="0,0,0,0" BackgroundColor="#8C5DA1">
                     <Button Clicked="Reg_Button_Clicked" VerticalOptions="Center" Text="Register"  BackgroundColor="#8C5DA1" Margin="0" FontSize="20"/>
                 </Frame>
+
+                <Label x:Name="infoLabel" />
 
                 <Button x:Name="LoginHandler" IsEnabled="False" IsVisible="False" Command="{Binding LoginCommand}" /> 
             </StackLayout>
