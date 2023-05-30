@@ -10,9 +10,10 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource Primary}">
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Label Text="Navabrar viible very importante function gotta rember" />
+                
+                <Label x:Name="tests" IsVisible="false" Text="Navabrar viible very importante function gotta rember" />
 
-                <Label Text="Login" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" />
+                <Label x:Name="justText" Text="Login" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" />
 
                 <Label Text="Email" TextColor="White" Margin="30,10,30,-10" FontSize="25" />
                 <Frame CornerRadius="10" Margin="30,10,30,-10" Padding="0,0,0,0" BackgroundColor="White" HasShadow="True">
@@ -32,9 +33,29 @@
                     </Entry>
                 </Frame>
 
-                <Frame CornerRadius="10" Margin="80,10,80,10" Padding="0,0,0,0" BackgroundColor="#8C5DA1">
-                    <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#8C5DA1" Margin="0" FontSize="20"/>
+                <Label x:Name="labelRePass" IsVisible="False" Text="Password" TextColor="White" Margin="30,0,30,-10" FontSize="25" />
+                <Frame x:Name="frameRePass" CornerRadius="10" IsVisible="False" Margin="30,10,30,30" Padding="0,0,0,0" BackgroundColor="White" HasShadow="True" >
+                    <Entry x:Name="SecondPasswordEntry" IsVisible="False" TextColor="Black" Background="White" IsPassword="True">
+                        <Entry.Effects>
+                            <effects:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
                 </Frame>
+
+                <Frame CornerRadius="10" Margin="80,10,80,10" Padding="0,0,0,0" BackgroundColor="#8C5DA1">
+                    <Button Clicked="Log_Button_Clicked" VerticalOptions="Center" Text="Login"  BackgroundColor="#8C5DA1" Margin="0" FontSize="20"/>
+                </Frame>
+
+                <Frame CornerRadius="10" Margin="80,10,80,10" Padding="0,0,0,0" BackgroundColor="#8C5DA1">
+                    <Button Clicked="Reg_Button_Clicked" VerticalOptions="Center" Text="Register"  BackgroundColor="#8C5DA1" Margin="0" FontSize="20"/>
+                </Frame>
+
+                <Frame x:Name="infoFrame" IsVisible="false" CornerRadius="17" BackgroundColor="#f00f0f" Margin="30,10">
+                    <Label x:Name="infoLabel" TextColor="white" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="20" />   
+                </Frame>
+                
+
+                <Button x:Name="LoginHandler" IsEnabled="False" IsVisible="False" Command="{Binding LoginCommand}" /> 
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
