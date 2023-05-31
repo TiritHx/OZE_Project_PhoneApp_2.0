@@ -23,7 +23,17 @@ namespace OZE_2._0.Views
             devicePowerLabel.Text = devices[0].Power.powerdecimal.ToString();
             deviceIdLabel.Text = devices[0]._id;
             deviceNameLabel.Text = devices[0].name;
-            deviceDataLabel.Text = devices[0].dateOfProduction.ToString();
+            string holder = devices[0].dateOfProduction.ToString();
+            string holder2 = "";
+            for(int i = 0; i < holder.Length; i++)
+            {
+                if (holder[i] == ' ')
+                {
+                    break;
+                }
+                holder2 += holder[i]; 
+            }
+            deviceDataLabel.Text = holder2;
             monthMoner.Text = "$"+(((double.Parse(devices[0].Power.powerdecimal.ToString()) * 24 * 30) / 500) * 0.24).ToString();
             yearMoner.Text = "$"+(((double.Parse(devices[0].Power.powerdecimal.ToString()) * 24 * 30 * 12) / 500) * 0.24).ToString();
             
@@ -59,7 +69,7 @@ namespace OZE_2._0.Views
 
             chart.Source = new HtmlWebViewSource { Html = svgchartHtml };
             power.Source = new HtmlWebViewSource { Html = svgpowerHtml };
-            battery.Source = new HtmlWebViewSource { Html = svgbatteryHtml };
+            //battery.Source = new HtmlWebViewSource { Html = svgbatteryHtml };
             dollar.Source = new HtmlWebViewSource { Html = svgdollarHtml };
             calendar.Source = new HtmlWebViewSource { Html = svgcalendarHtml };
             calendar1.Source = new HtmlWebViewSource { Html = svgcalendarHtml };

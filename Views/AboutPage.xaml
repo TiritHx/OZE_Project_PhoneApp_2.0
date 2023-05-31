@@ -29,21 +29,17 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
                             <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="25" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="25" />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Stats" TextColor="White"/>
-                        <WebView x:Name="chart" Grid.Row="0" Grid.Column="2"/>
-                        <WebView x:Name="power" Grid.Row="1"/>
-                        <Label Grid.Row="1" Grid.Column="1" FontSize="20" Text="Voltage:" TextColor="White"/>
-                        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="16kWh" TextColor="White" HorizontalOptions="End"/>
-                        <WebView x:Name="battery" Grid.Row="2"/>
-                        <Label Grid.Row="2" Grid.Column="1" FontSize="20" Text="Power:" TextColor="White"/>
-                        <Label x:Name="devicePowerLabel" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="" TextColor="White" HorizontalOptions="End"/>
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Stats" TextColor="White" VerticalOptions="Center"/>
+                        <WebView x:Name="chart" Grid.Row="0" Grid.Column="2" />
+                        <WebView x:Name="power" Grid.Row="1" />
+                        <Label Grid.Row="1" Grid.Column="1" FontSize="20" Text="Power:" TextColor="White" VerticalOptions="Center"/>
+                        <Label x:Name="devicePowerLabel" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"/>
                     </Grid>
                 </Frame>
                 <Frame BackgroundColor="#62C060">
@@ -58,14 +54,14 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="25" />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Savings" TextColor="White"/>
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Savings" TextColor="White" VerticalOptions="Center"/>
                         <WebView x:Name="dollar" Grid.Row="0" Grid.Column="2"/>
-                        <WebView x:Name="calendar" Grid.Row="1"/>
-                        <Label Grid.Row="1" Grid.Column="1" FontSize="20" Text="Month:" TextColor="White"/>
-                        <Label x:Name="monthMoner" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="$1000" TextColor="White" HorizontalOptions="End"/>
-                        <WebView x:Name="calendar1" Grid.Row="2"/>
-                        <Label Grid.Row="2" Grid.Column="1" FontSize="20" Text="Year:" TextColor="White"/>
-                        <Label x:Name="yearMoner" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="$1000000" TextColor="White" HorizontalOptions="End"/>
+                        <WebView x:Name="calendar" Grid.Row="1" />
+                        <Label Grid.Row="1" Grid.Column="1" FontSize="20" Text="Month:" TextColor="White" VerticalOptions="Center"/>
+                        <Label x:Name="monthMoner" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="$100" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <WebView x:Name="calendar1" Grid.Row="2" />
+                        <Label Grid.Row="2" Grid.Column="1" FontSize="20" Text="Year:" TextColor="White" VerticalOptions="Center"/>
+                        <Label x:Name="yearMoner" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Text="$10000" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"/>
                     </Grid>
                 </Frame>
                 <Frame BackgroundColor="#8C5DA1">
@@ -82,16 +78,16 @@
                             <ColumnDefinition Width="25" />
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="30" Text="Device Info" TextColor="White"/>
-                        <WebView x:Name="settings" Grid.Row="0" Grid.Column="2"/>
-                        <WebView x:Name="key" Grid.Row="1"/>
-                        <Label Grid.Row="1" Grid.Column="1" FontSize="19" Text="ID:" TextColor="White"/>
-                        <Label x:Name="deviceIdLabel" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="15" Text="" TextColor="White" HorizontalOptions="End"/>
-                        <WebView x:Name="list" Grid.Row="2"/>
-                        <Label Grid.Row="2" Grid.Column="1" FontSize="19" Text="Model:" TextColor="White"/>
-                        <Label x:Name="deviceNameLabel" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="19" Text="" TextColor="White" HorizontalOptions="End"/>
-                        <WebView x:Name="calendar2" Grid.Row="3"/>
-                        <Label Grid.Row="3" Grid.Column="1" FontSize="19" Text="Manufactured:" TextColor="White"/>
-                        <Label x:Name="deviceDataLabel" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" FontSize="11" Text="" TextColor="White" HorizontalOptions="End"/>
+                        <WebView x:Name="settings" Grid.Row="0" Grid.Column="2" />
+                        <WebView x:Name="key" Grid.Row="1" />
+                        <Label Grid.Row="1" Grid.Column="1" FontSize="19" Text="ID:" TextColor="White" VerticalOptions="Center"/>
+                        <Label x:Name="deviceIdLabel" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="15" Text="" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <WebView x:Name="list" Grid.Row="2" />
+                        <Label Grid.Row="2" Grid.Column="1" FontSize="19" Text="Model:" TextColor="White" VerticalOptions="Center"/>
+                        <Label x:Name="deviceNameLabel" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="19" Text="" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <WebView x:Name="calendar2" Grid.Row="3" />
+                        <Label Grid.Row="3" Grid.Column="1" FontSize="19" Text="Manufactured:" TextColor="White" VerticalOptions="Center"/>
+                        <Label x:Name="deviceDataLabel" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" FontSize="19" Text="" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"/>
                     </Grid>
                 </Frame>
             </StackLayout>

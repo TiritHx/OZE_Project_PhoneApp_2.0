@@ -33,12 +33,12 @@ namespace OZE_2._0.Views
                     {
                         // tu rejestracja i przechodzi dalej, sprawdx czy nie ma już użytkownika z takim emailem
 
-                        string query = $"https://hydrospar.onrender.com/register/email/{EmailEntry.Text}/password/{PasswordEntry.Text}/reppassword/{SecondPasswordEntry}";    // pobieranie listy użytkowników
+                        string query = $"https://hydrospar.onrender.com/register/email/{EmailEntry.Text}/password/{PasswordEntry.Text}/reppassword/{SecondPasswordEntry.Text}";    // pobieranie listy użytkowników
                         HttpResponseMessage response = new HttpResponseMessage();
                         Task.Run(async () => { response = await httpClient.SendAsync(new HttpRequestMessage(new HttpMethod("POST"), new Uri(query))); });
                         if (response.StatusCode == HttpStatusCode.OK)
                         {
-                            infoLabel.Text = "Zalogowano pomyślnie";
+                            infoLabel.Text = "Zarejestrowano pomyślnie";
                             infoFrame.IsVisible = true;
                             infoFrame.BackgroundColor = Color.Blue;
                             LoginHandler.Command.Execute(null);
@@ -89,7 +89,7 @@ namespace OZE_2._0.Views
                     string query = $"https://hydrospar.onrender.com/mobileLogin/email/{EmailEntry.Text}/password/{PasswordEntry.Text}";
                     HttpResponseMessage response = new HttpResponseMessage();
                     Task.Run(async () => { response = await httpClient.SendAsync(new HttpRequestMessage(new HttpMethod("POST"), new Uri(query))); });
-                    tests.Text = response.ToString();
+                    //tests.Text = response.ToString();
                     LoginHandler.Command.Execute(null);
                 }
                 else
